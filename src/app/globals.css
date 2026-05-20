@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 11, 15, 25;
+  --background-end-rgb: 11, 15, 25;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 15s ease infinite;
+  }
+
+  @keyframes gradient-x {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
